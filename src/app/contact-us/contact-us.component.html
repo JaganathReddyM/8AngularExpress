@@ -1,6 +1,38 @@
-<p>Contact-us works!</p>
-<b>We can be contacted on......</b>
-<b>Our Address</b>
+<b>Enter Contact details</b><br>
+<form #userData="ngForm" (ngSubmit)='addUser(userData)'>
+  Name <input type="text" name="uid" ngModel /><br>
+  Mobile No <input type="number" name="password" ngModel /><br>
+  EmailId <input type="email" name="emailid" ngModel /><br>
+ 
+  <input type="submit" value="Add user" />
+  <input type="button" value="Get user" (click)="getAllUsers()"/>
+  
+</form>
+<br><label>{{this.expresponse}}</label><br><br>
+<h2>User Data</h2>
+ 
+ 
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Mobile No</th>
+    <th>EmailId</th>
+  </tr>
+  <tr *ngFor="let user of userList">
+    <td>{{ user.userid }}</td>
+    <td>{{ user.password }}</td>
+    <td>{{ user.emailid }}</td>
+   
+    <td>
+    </td>
+  </tr>
+</table>
+
 <div>
-    GAVS,<br>Sholinganallur,<br>Chennai,<br>India
+    Gavs,<br>
+    Shollinganallur,<br>
+    Chennai,<br>
+    INDIA
 </div>
+
+<p>contact-us works!</p>
