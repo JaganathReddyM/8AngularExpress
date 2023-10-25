@@ -2,12 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>8AngularExpress</title>
+  <title>AngularExpress</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  
+    #cat {
+      width: 100px;
+      height: auto;
+      position: absolute;
+      animation: moveDiagonal 8s linear infinite;
+    }
+    @keyframes moveDiagonal {
+      0% {
+        left: 0;
+        top: 0;
+      }
+      25% {
+        left: calc(100% - 150px);
+        top: 0;
+      }
+      50% {
+        left: calc(100% - 150px);
+        top: calc(100% - 100px);
+      }
+      75% {
+        left: 0;
+        top: calc(100% - 100px);
+      }
+      100% {
+        left: 0;
+        top: 0;
+      }
+    }
+  </style>
 </head>
-<body>
+<center>
+<body style="background-image: url(https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); width: 100%; height: 100%; background-size: cover;">
+    <img id="cat" src="https://pngtree.com/freepng/cute-cartoon-cat-png-file_13379945.jpeg?auto" alt="Cat Image">
+  <!--Sequence of displaying thw component-->
   <app-root></app-root>
+  <!--<app-contact-us></app-contact-us>-->
 </body>
+</center>
 </html>
